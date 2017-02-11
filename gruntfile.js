@@ -173,22 +173,22 @@ module.exports = function (grunt) {
         }
       , phaserArcade:
         { files:
-          [ { src: ['node_modules/phaser/build/custom/phaser-arcade-physics.js'], dest: 'build/js/phaser.js' }
+          [ { src: ['node_modules/phaser-ce/build/custom/phaser-arcade-physics.js'], dest: 'build/js/phaser.js' }
           ]
         }
       , phaserArcadeMin:
         { files:
-          [ { src: ['node_modules/phaser/build/custom/phaser-arcade-physics.min.js'], dest: 'build/js/phaser.js' }
+          [ { src: ['node_modules/phaser-ce/build/custom/phaser-arcade-physics.min.js'], dest: 'build/js/phaser.js' }
           ]
         }
       , phaserP2:
         { files:
-          [ { src: ['node_modules/phaser/build/phaser.js'], dest: 'build/js/phaser.js' }
+          [ { src: ['node_modules/phaser-ce/build/phaser.js'], dest: 'build/js/phaser.js' }
           ]
         }
       , phaserP2Min:
         { files:
-          [ { src: ['node_modules/phaser/build/phaser.min.js'], dest: 'build/js/phaser.js' }
+          [ { src: ['node_modules/phaser-ce/build/phaser.min.js'], dest: 'build/js/phaser.js' }
           ]
         }
       }
