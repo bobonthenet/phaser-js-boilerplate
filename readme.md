@@ -1,4 +1,5 @@
 # A Phaser.js Boilerplate
+This is essentially Luke Wilde's fantastic boilerplate with my own customizations. The main thing being the json folder.
 
 A template to boost the productivity of Phaser.js game developers. Provides tools to improve code reuse, assist in development activities, and can package projects into production ready bundles.
 
