@@ -86,6 +86,10 @@ module.exports = function (grunt) {
         { files: 'src/audio/**/*'
         , tasks: ['copy:audio']
         }
+      , json:
+        { files: 'src/json/**/*'
+        , tasks: ['copy:json']
+        }
       }
 
     , browserify:
@@ -110,7 +114,7 @@ module.exports = function (grunt) {
 
     , cacheBust:
       { options:
-        { assets: ['audio/**', 'images/**', 'js/**', 'style/**']
+        { assets: ['audio/**', 'images/**', 'js/**', 'style/**', 'json/**']
         , baseDir: './build/'
         , deleteOriginals: true
         , length: 5
@@ -171,6 +175,11 @@ module.exports = function (grunt) {
           [ { expand: true, cwd: 'src/audio/', src: ['**'], dest: 'build/audio/' }
           ]
         }
+      , json:
+        { files:
+          [ { expand: true, cwd: 'src/json', src: ['**'], dest: 'build/json' }
+          ]
+        }
       , phaserArcade:
         { files:
           [ { src: ['node_modules/phaser-ce/build/custom/phaser-arcade-physics.js'], dest: 'build/js/phaser.js' }
@@ -225,6 +234,7 @@ module.exports = function (grunt) {
     , 'stylus'
     , 'copy:images'
     , 'copy:audio'
+    , 'copy:json'
     , 'copy:phaserArcade'
     , 'connect'
     , 'open'
@@ -233,16 +243,17 @@ module.exports = function (grunt) {
   );
 
   grunt.registerTask('build',
-    [ /*'jshint'
-    , */'clean'
+    [ 'jshint'
+    , 'clean'
     , 'browserify'
     , 'jade'
     , 'stylus'
     , 'uglify'
     , 'copy:images'
     , 'copy:audio'
+    , 'copy:json'
     , 'copy:phaserArcadeMin'
-    , 'cacheBust'
+    /*, 'cacheBust'*/
     , 'connect'
     , 'open'
     , 'watch'
